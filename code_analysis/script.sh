@@ -24,8 +24,6 @@ fi
 
 echo "Identified project type: ${PROJECT_TYPE}"
 
-echo "Sonar token is: ${SONAR_TOKEN}"
-
 docker run\
   --rm \
   -e SONAR_HOST_URL="${SONAR_HOST_URL}" \
