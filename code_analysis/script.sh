@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SONAR_HOST_URL=${SONAR_HOST_URL}
-SONAR_TOKEN=$sonar_token
+SONAR_TOKEN=${sonar_token}
 PROJECT_PATH=${PWD}
 PROJECT_KEY=${JOB_BASE_NAME}
 PROJECT_NAME=${JOB_BASE_NAME}
@@ -23,6 +23,8 @@ else
 fi
 
 echo "Identified project type: ${PROJECT_TYPE}"
+
+echo "Sonar token is: ${SONAR_TOKEN}"
 
 docker run\
   --rm \
