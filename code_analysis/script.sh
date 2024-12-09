@@ -36,7 +36,7 @@ docker run\
   -Dsonar.login="${SONAR_LOGIN}" \
   ${SONAR_PARAMS}
 
-echo "[+] SUCCESS: Analysis complete"
+
 
 
 
