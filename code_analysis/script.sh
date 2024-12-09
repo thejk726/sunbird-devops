@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SONAR_HOST_URL=${SONAR_HOST_URL}
-SONAR_LOGIN=$1
+SONAR_TOKEN=$sonar_token
 PROJECT_PATH=${PWD}
 PROJECT_KEY=${JOB_BASE_NAME}
 PROJECT_NAME=${JOB_BASE_NAME}
@@ -27,7 +27,7 @@ echo "Identified project type: ${PROJECT_TYPE}"
 docker run\
   --rm \
   -e SONAR_HOST_URL="${SONAR_HOST_URL}" \
-  -e SONAR_LOGIN="${SONAR_LOGIN}" \
+  -e SONAR_LOGIN="${SONAR_TOKEN}" \
   -v "${PROJECT_PATH}:/usr/src" \
   sonarsource/sonar-scanner-cli \
   -Dsonar.projectKey="${PROJECT_KEY}" \
