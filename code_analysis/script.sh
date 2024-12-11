@@ -10,6 +10,7 @@ if [ -f "pom.xml" ]; then # Checks and sets parameters for java based projects
   PROJECT_TYPE="java"
   SONAR_SOURCES="src/main/java"
   SONAR_PARAMS="-Dsonar.java.binaries=target/classes"
+  mvn clean compile
 
 elif [ -f "package.json" ]; then # Checks and sets parameters for node based projects
   PROJECT_TYPE="node"
