@@ -7,7 +7,7 @@ PROJECT_KEY=${JOB_BASE_NAME}
 PROJECT_NAME=${JOB_BASE_NAME}
 
 if [ -f "pom.xml" ]; then # Checks and sets parameters for java based projects
-  PROJECT_TYPE="java"
+  PROJECT_TYPE="java (maven)"
   SONAR_SOURCES="src/main/java"
   SONAR_PARAMS="-Dsonar.java.binaries=target/classes"
   mvn clean compile
